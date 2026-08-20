@@ -1,0 +1,16 @@
+__pycache__/
+.ipynb_checkpoints/
+
+outputs/
+runs/
+dataset/
+
+*.pt
+*.onnx
+*.engine
+*.tflite
+*.pb
+
+.env
+.venv/
+venv/

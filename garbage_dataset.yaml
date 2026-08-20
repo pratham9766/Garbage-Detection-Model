@@ -1,0 +1,13 @@
+path: D:/RESOURCES/GarbageDetection/dataset
+train: images/train
+val: images/val
+
+names:
+  0: plastic_bottle
+  1: glass_bottle
+  2: can
+  3: paper
+  4: cardboard
+  5: plastic_bag
+  6: food_waste
+  7: other_trash
