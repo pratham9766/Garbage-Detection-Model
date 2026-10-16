@@ -52,6 +52,22 @@ python garbage_detector.py --source path\to\images --recursive
 python garbage_detector.py --source path\to\video.mp4
 ```
 
+## Compare MobileNet And YOLO
+
+Run both models on each webcam frame in two separate windows, one for MobileNet and one for YOLO. Each window shows inference time, estimated inference FPS, and detection count. Both use the same confidence threshold.
+
+```powershell
+python compare_models.py --source 0
+```
+
+Use a video file or custom YOLO weights:
+
+```powershell
+python compare_models.py --source path\to\video.mp4 --yolo-model runs\garbage_detector\weights\best.pt
+```
+
+The MobileNet model is SSD MobileNet V2 from TensorFlow Hub. By default, YOLO uses `yolov8n.pt`; pass custom weights to compare against a model trained on your garbage dataset. For a meaningful accuracy comparison, evaluate both models against the same labeled images and classes; the live view compares speed and predictions, not accuracy.
+
 ## Useful Options
 
 Detect every class in the model:
